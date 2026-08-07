@@ -18,7 +18,12 @@ public class Space {
     }
 
     public void setActual(final Integer actual) {
+        if(fixed) return;
         this.actual = actual;
+    }
+
+    public void clearSpace() {
+        setActual(null);
     }
 
     public int getExpected() {
